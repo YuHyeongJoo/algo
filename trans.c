@@ -18,12 +18,11 @@ int main(){
         char c;
         while((c=fgetc(fp))!=EOF)
                 if(c=='\n') line++;
-        printf("line:%d\n",line);
+       
         rewind(fp);
         char tmp[255];
         fgets(tmp,255,fp);
-        char *ptr = strtok(tmp," ");
-
+        char *ptr ;
         int i;
         char tmp2[3];
 
@@ -60,19 +59,21 @@ int main(){
               
             
           }
-          printf("\n");
+          
         }
        
          for(int i=0; i<line; i++){
+           printf("%c: ",65+i);
           for(int j=0; j<line; j++){
-            printf("%d ",adj[i][j]);
+            printf("%c ",adj[i][j]);
           }
           printf("\n");
          }
           printf("\n");
          for(int i=0; i<line; i++){
+           printf("%c: ",65+i);
           for(int j=0; j<line; j++){
-            printf("%d ",transpose[i][j]);
+            printf("%c ",transpose[i][j]);
           }
           printf("\n");
          }
