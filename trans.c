@@ -61,7 +61,7 @@ int main(){
           }
           
         }
-       
+   	printf("adj list\n");    
          for(int i=0; i<line; i++){
            printf("%c: ",65+i);
           for(int j=0; j<line; j++){
@@ -69,7 +69,7 @@ int main(){
           }
           printf("\n");
          }
-          printf("\n");
+          printf("\ntranspose list\n");
          for(int i=0; i<line; i++){
            printf("%c: ",65+i);
           for(int j=0; j<line; j++){
