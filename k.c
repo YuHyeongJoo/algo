@@ -1,7 +1,8 @@
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
-
 #include <string.h>
 void push_back(int *arr,int n);
 int main(){
@@ -20,11 +21,12 @@ int main(){
         char c;
         while((c=fgetc(fp))!=EOF)
                 if(c=='\n') line++;
-       
+        printf("line:%d\n",line);
         rewind(fp);
         char tmp[255];
         fgets(tmp,255,fp);
-        char *ptr ;
+        char *ptr = strtok(tmp," ");
+
         int i;
         char tmp2[3];
 
@@ -61,21 +63,19 @@ int main(){
               
             
           }
-          
+          printf("\n");
         }
-   	printf("adj list\n");    
+       
          for(int i=0; i<line; i++){
-           printf("%c: ",65+i);
           for(int j=0; j<line; j++){
-            printf("%c ",adj[i][j]);
+            printf("%d ",adj[i][j]);
           }
           printf("\n");
          }
-          printf("\ntranspose list\n");
+          printf("\n");
          for(int i=0; i<line; i++){
-           printf("%c: ",65+i);
           for(int j=0; j<line; j++){
-            printf("%c ",transpose[i][j]);
+            printf("%d ",transpose[i][j]);
           }
           printf("\n");
          }
